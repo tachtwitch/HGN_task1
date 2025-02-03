@@ -10,7 +10,7 @@
 	"description": "A RESTful API that classifies numbers into various categories, including prime numbers, perfect numbers, armstrong numbers, even numbers, and odd numbers.",
 	"main": "app.js",
 	"scripts": {
-  "build": "pnpm run build"
+  "build": "npm run build"
 },
 	"repository": {
 		"type": "git",
