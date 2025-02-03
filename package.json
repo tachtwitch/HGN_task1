@@ -1,0 +1,27 @@
+{
+	"dependencies": {
+		"axios": "^1.7.9",
+		"express": "^4.21.2"
+	},
+	"type": "module",
+	"name": "classification-api",
+	"version": "1.0.0",
+	"description": "A RESTful API that classifies numbers into various categories, including prime numbers, perfect numbers, armstrong numbers, even numbers, and odd numbers.",
+	"main": "app.js",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tachtwitch/HGN_task1.git"
+	},
+	"keywords": [
+		"classification-api",
+		"HGN",
+		"numbersapi"
+	],
+	"author": "tachtwitch",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/tachtwitch/HGN_task1/issues"
+	},
+	"homepage": "https://github.com/tachtwitch/HGN_task1#readme"
+}
