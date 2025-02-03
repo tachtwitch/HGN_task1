@@ -1,7 +1,6 @@
 // GET <domain>/api/classify-number?number={number}
 import axios from "axios";
 import express from "express";
-import serverless from 'serverless-http'
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -14,19 +13,19 @@ const isPrime = num => {
 
 
 const isPerfect = (n) => {
-    if (!Number.isInteger(n) || n <= 0) {
-        return false;
+  if (!Number.isInteger(n) || n <= 0) {
+    return false;
+  }
+
+  let sum = 0;
+
+  for (let i = 1; i < n; i++) {
+    if (n % i === 0) {
+      sum += i;
     }
-    
-    let sum = 0;
-    
-    for (let i = 1; i < n; i++) {
-        if (n % i === 0) {
-        sum += i;
-        }
-    }
-    
-    return sum === n;
+  }
+
+  return sum === n;
 }
 
 const digitsum = (number) => {
@@ -91,4 +90,6 @@ app.get('/api/classify-number', async (req,res)=>{
     
 });
 
-export const handler = serverless(api);
+app.listen(PORT, () => {
+    console.log(`Server is running at PORT: ${PORT}`)
+});

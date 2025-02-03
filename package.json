@@ -10,8 +10,8 @@
 	"description": "A RESTful API that classifies numbers into various categories, including prime numbers, perfect numbers, armstrong numbers, even numbers, and odd numbers.",
 	"main": "app.js",
 	"scripts": {
-  "build": "npm run build"
-},
+	"build": "serverless webpack"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/tachtwitch/HGN_task1.git"
