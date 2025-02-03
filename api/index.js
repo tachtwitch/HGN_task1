@@ -13,6 +13,7 @@ const isPrime = num => {
 
 
 const isPerfect = (n) => {
+
   if (!Number.isInteger(n) || n <= 0) {
     return false;
   }
@@ -51,6 +52,11 @@ const isArmstrong = (number) => {
         return false;
     }
 }
+
+app.get('/', (req,res) =>{
+    res.send( '<a href="/api/classify-number">start </a>');
+});
+
 app.get('/api/classify-number', async (req,res)=>{
     try {
         const number = req.query.number;
@@ -93,3 +99,5 @@ app.get('/api/classify-number', async (req,res)=>{
 app.listen(PORT, () => {
     console.log(`Server is running at PORT: ${PORT}`)
 });
+
+export default app;
