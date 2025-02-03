@@ -1,6 +1,7 @@
 // GET <domain>/api/classify-number?number={number}
 import axios from "axios";
 import express from "express";
+import serverless from 'serverless-http'
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -90,6 +91,4 @@ app.get('/api/classify-number', async (req,res)=>{
     
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running at PORT: ${PORT}`)
-});
+export const handler = serverless(api);
