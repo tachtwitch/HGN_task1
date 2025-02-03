@@ -12,20 +12,20 @@ const isPrime = num => {
         }
 
 
-const isPerfect = n => {
-if (!Number.isInteger(n) || n <= 0) {
-    return false;
-}
-
-let sum = 0;
-
-for (let i = 1; i < n; i++) {
-    if (n % i === 0) {
-        sum += i;
+const isPerfect = (n) => {
+    if (!Number.isInteger(n) || n <= 0) {
+        return false;
     }
-}
-const isPerfect = sum === n;
-return isPerfect;
+    
+    let sum = 0;
+    
+    for (let i = 1; i < n; i++) {
+        if (n % i === 0) {
+        sum += i;
+        }
+    }
+    
+    return sum === n;
 }
 
 const digitsum = (number) => {
@@ -56,7 +56,7 @@ app.get('/api/classify-number', async (req,res)=>{
         const number = req.query.number;
         const properties= [];
 
-        if(!number || typeof(number) != 'number'){
+        if(!number || isNaN(number)){
             res.status(400).json({number:'alphabet',error: true})
         }
             if (isArmstrong(number)){
