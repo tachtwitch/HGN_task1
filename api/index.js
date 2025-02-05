@@ -1,8 +1,10 @@
 // GET <domain>/api/classify-number?number={number}
 import axios from "axios";
 import express from "express";
+import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 3000;
+const cors = cors();
 
 const isPrime = num => {
             for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
@@ -93,8 +95,9 @@ app.get('/api/classify-number', async (req,res)=>{
         console.log(error);
         res.status(500).send(error)
     }
-    
 });
+
+app.use(cors);
 
 app.listen(PORT, () => {
     console.log(`Server is running at PORT: ${PORT}`)

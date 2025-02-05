@@ -1,6 +1,7 @@
 {
 	"dependencies": {
 		"axios": "^1.7.9",
+		"cors": "^2.8.5",
 		"express": "^4.21.2",
 		"serverless-http": "^3.2.0"
 	},
@@ -10,7 +11,7 @@
 	"description": "A RESTful API that classifies numbers into various categories, including prime numbers, perfect numbers, armstrong numbers, even numbers, and odd numbers.",
 	"main": "app.js",
 	"scripts": {
-	"start": "node api/index.js"
+		"start": "node api/index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -27,5 +28,4 @@
 		"url": "https://github.com/tachtwitch/HGN_task1/issues"
 	},
 	"homepage": "https://github.com/tachtwitch/HGN_task1#readme"
-	
 }
