@@ -71,7 +71,6 @@ app.get('/api/classify-number', async (req,res)=>{
         if(number % 1 == 1){
             res.status(400).json({number:'float',error: true})
         }
-        if(is)
             if (isArmstrong(number)){
                 properties.push('armstrong')
             }
