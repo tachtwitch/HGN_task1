@@ -97,8 +97,6 @@ app.get('/api/classify-number', async (req,res)=>{
     }
 });
 
-app.use(cors);
-
 app.listen(PORT, () => {
     console.log(`Server is running at PORT: ${PORT}`)
 });
