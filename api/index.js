@@ -4,7 +4,6 @@ import express from "express";
 import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 3000;
-const cors = cors();
 
 const isPrime = num => {
             for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
@@ -55,6 +54,8 @@ const isArmstrong = (number) => {
     }
 }
 
+app.use(cors());
+
 app.get('/', (req,res) =>{
     res.send( '<a href="/api/classify-number">start </a>');
 });
@@ -67,6 +68,10 @@ app.get('/api/classify-number', async (req,res)=>{
         if(!number || isNaN(number)){
             res.status(400).json({number:'alphabet',error: true})
         }
+        if(number % 1 == 1){
+            res.status(400).json({number:'float',error: true})
+        }
+        if(is)
             if (isArmstrong(number)){
                 properties.push('armstrong')
             }
