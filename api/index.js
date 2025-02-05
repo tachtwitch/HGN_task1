@@ -2,6 +2,7 @@
 import axios from "axios";
 import express from "express";
 import cors from 'cors';
+import { HttpStatusCode } from "axios";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -68,7 +69,7 @@ app.get('/api/classify-number', async (req,res)=>{
         if(!number || isNaN(number)){
             res.status(400).json({number:'alphabet',error: true})
         }
-        if(number % 1 == 1){
+        if(number%1 !=0){
             res.status(400).json({number:'float',error: true})
         }
             if (isArmstrong(number)){
@@ -92,9 +93,6 @@ app.get('/api/classify-number', async (req,res)=>{
                 fun_fact:response.data
             }
         );
-        
-        
-
     } catch (error) {
         console.log(error);
         res.status(500).send(error)
