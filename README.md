@@ -37,7 +37,7 @@ A RESTful API that classifies numbers into different categories such as prime, p
 
 ### Clone the repository
 
-* `git clone https://github.com/your-username/number-classifier-api.git`
+* `git clone https://github.com/tachtwitch/number-classifier-api.git`
 
 ### Install dependencies
 
@@ -59,7 +59,7 @@ A RESTful API that classifies numbers into different categories such as prime, p
 
 ### Fork the repository
 
-* `git fork https://github.com/your-username/number-classifier-api.git`
+* `git fork https://github.com/tachtwitch/number-classifier-api.git`
 
 ### Create a new branch
 
